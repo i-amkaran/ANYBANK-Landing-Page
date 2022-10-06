@@ -1,0 +1,83 @@
+//Intro
+
+.intro {
+  background-image: url("../../images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  background-color: $clr-very-light;
+
+  @include tablet {
+    background-image: url("../../images/bg-intro-desktop.svg");
+    background-size: auto;
+    background-position: 43vw 55%;
+  }
+
+  &__content {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      height: 35rem;
+    }
+  }
+
+  &__img {
+    transform: translateY(-10%);
+    @include tablet {
+      transform: translateY(0);
+      width: 55%;
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    transform: translateY(-10%);
+    padding: 2rem 0;
+    @include tablet {
+      width: 40%;
+      text-align: left;
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $clr-dark;
+    padding-bottom: 1.5625rem;
+    @include tablet {
+      font-size: 2.375rem;
+      padding-bottom: 1.5rem;
+    }
+    @include desktop {
+      font-size: 3.125rem;
+      padding-bottom: 1.875rem;
+    }
+  }
+
+  &__description {
+    color: $clr-grayish;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    padding-bottom: 2.25rem;
+    @include tablet {
+      font-size: 0.9375rem;
+      padding-bottom: 2rem;
+    }
+    @include desktop {
+      font-size: 1.125rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+}

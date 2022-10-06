@@ -1,0 +1,102 @@
+//Header
+
+.header {
+  background-color: $clr-white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+
+  &__top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.0625rem;
+    @include desktop {
+      height: 5rem;
+    }
+  }
+
+  &__ham-btn {
+    background: transparent;
+    background-image: url("../../images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 2 / 1;
+    border: 0;
+    z-index: 999;
+    cursor: pointer;
+    span {
+      @include hide-on-screen;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__ham-btn[aria-expanded="true"] {
+    background-image: url("../../images/icon-close.svg");
+    width: 1.125rem;
+    aspect-ratio: 1;
+    z-index: 999;
+  }
+
+  &__nav {
+    @include flex-center;
+  }
+
+  &__nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    position: fixed;
+    top: 5.5625rem;
+    left: 1.5rem;
+    padding: 2rem;
+    width: calc(100% - 3rem);
+    background-color: $clr-white;
+    border-radius: 0.5rem;
+    box-shadow: 0 5rem 6rem 1.5rem $clr-dark-35;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      gap: 1.75rem;
+      top: 0;
+      left: 0;
+      padding: 0;
+      background-color: transparent;
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $clr-grayish;
+    font-size: 0.875rem;
+    &:hover {
+      color: $clr-dark;
+      @include tablet {
+        padding-bottom: 1.25rem;
+        border-bottom: 0.2rem solid $clr-accent;
+      }
+      @include desktop {
+        padding-bottom: 1.75rem;
+      }
+    }
+  }
+
+  &__btn {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+}
+
+.is-active {
+  display: flex;
+}

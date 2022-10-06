@@ -1,0 +1,20 @@
+//Settings
+@import "./settings/reset";
+@import "./settings/fonts";
+@import "./settings/variables";
+@import "./settings/mixins";
+@import "./settings/utils";
+
+//Components
+@import "./components/header";
+@import "./components/intro";
+@import "./components/about";
+@import "./components/articles";
+@import "./components/footer";
+
+//Main styles
+
+body {
+  font-family: $ff-sans;
+  font-weight: 400;
+}
