@@ -1,0 +1,65 @@
+//About
+
+.about {
+  background-color: $clr-grayish-light;
+  padding: 4.375rem 0;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 2.375rem;
+    font-weight: 300;
+    color: $clr-dark;
+    padding-bottom: 1.5rem;
+  }
+
+  &__description {
+    color: $clr-grayish;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    @include tablet {
+      max-width: 35rem;
+    }
+  }
+
+  &__articles {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__article {
+    flex-direction: column;
+    @include tablet {
+      align-items: flex-start;
+      max-width: 16rem;
+    }
+  }
+
+  &__article-icon {
+    width: 4.5rem;
+    aspect-ratio: 1;
+    margin-top: 2.5rem;
+    @include tablet {
+      margin-top: 4.875rem;
+    }
+  }
+
+  &__article-title {
+    font-size: 20px;
+    font-weight: 300;
+    color: $clr-dark;
+    padding: 1.875rem 0 1.625rem 0;
+  }
+
+  &__article-desc {
+    color: $clr-grayish;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+  }
+}
